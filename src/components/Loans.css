@@ -1,0 +1,88 @@
+.loans-container {
+  position: absolute; /* Allows precise positioning */
+  top: 80px; /* Leaves space for the navbar */
+  left: 290px; /* Sidebar width, adjust as per your sidebar width */
+  height: calc(100vh - 80px); /* Full height minus navbar height */
+  width: calc(100% - 250px); /* Full width minus sidebar width */
+  padding: 20px; /* Optional padding for content */
+  background: #f9f9f9; /* Background color */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+  }
+  
+  /* Page Title */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Loan Summary Section */
+  .loan-summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .loan-card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .loan-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .loan-card p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Active Loans Table */
+  .active-loans {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .active-loans h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead th {
+    text-align: left;
+    padding: 10px 15px;
+    background: #f4f4f4;
+  }
+  
+  tbody td,
+  tfoot td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  tfoot tr {
+    font-weight: bold;
+  }
+  
+  .repay-btn {
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,72 @@
+/* Container for the transactions page */
+.transactions-container {
+  position: absolute; /* Allows precise positioning */
+  top: 80px; /* Leaves space for the navbar */
+  left: 290px; /* Sidebar width, adjust as per your sidebar width */
+  height: calc(100vh - 80px); /* Full height minus navbar height */
+  width: calc(100% - 250px); /* Full width minus sidebar width */
+  padding: 20px; /* Optional padding for content */
+  background: #f9f9f9; /* Background color */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+}
+/* Header */
+.transactions-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* List of transactions */
+.transactions-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+/* Individual transaction card */
+.transaction-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on cards */
+.transaction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Transaction card title */
+.transaction-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* General text */
+.transaction-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Income and expense colors */
+.transaction-card .income {
+  color: #4caf50; /* Green for income */
+}
+
+.transaction-card .expense {
+  color: #ff5252; /* Red for expense */
+}
+
+/* Status colors */
+.transaction-card .pending {
+  color: #ff9800; /* Orange for pending */
+  font-weight: bold;
+}
+
+.transaction-card .completed {
+  color: #4caf50; /* Green for completed */
+  font-weight: bold;
+}

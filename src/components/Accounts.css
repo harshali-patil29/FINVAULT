@@ -1,0 +1,122 @@
+.accounts-container {
+    position: absolute; /* Allows precise positioning */
+  top: 80px; /* Leaves space for the navbar */
+  left: 290px; /* Sidebar width, adjust as per your sidebar width */
+  height: calc(100vh - 80px); /* Full height minus navbar height */
+  width: calc(100% - 250px); /* Full width minus sidebar width */
+  padding: 20px; /* Optional padding for content */
+  background: #f9f9f9; /* Background color */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+}
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .summary-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .summary-card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .last-transaction-section,
+  .overview-section,
+  .card-invoice-section {
+    margin-bottom: 30px;
+  }
+  
+  .transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .transaction-item h4 {
+    font-size: 18px;
+  }
+  
+  .transaction-item p {
+    color: #666;
+    margin: 0;
+  }
+  
+  .transaction-item .expense {
+    color: #ff5252;
+  }
+  
+  .transaction-item .income {
+    color: #4caf50;
+  }
+  
+  .transaction-item .status {
+    font-weight: bold;
+  }
+  
+  .transaction-item .status.pending {
+    color: #ff9800;
+  }
+  
+  .transaction-item .status.completed {
+    color: #4caf50;
+  }
+  
+  .card-invoice-section {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .my-card {
+    flex: 1;
+  }
+  
+  .invoices-section {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .invoice-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .invoice-item h4 {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .invoice-item p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
