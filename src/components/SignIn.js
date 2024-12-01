@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const SignIn = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [capVal, setCapVal] = useState(null);
 
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
-
+    console.log(email);
     // Simulate successful sign-in logic
     console.log("Sign-in successful!");
 
@@ -23,13 +26,32 @@ const SignIn = () => {
         <form onSubmit={handleSignIn}>
           <div className="form-group">
             <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" required />
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
           <div className="form-group">
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" required />
+            <input
+              type="password"
+              placeholder="Enter your password"
+              required
+            />
           </div>
-          <button type="submit" className="auth-btn">Sign In</button>
+
+          <ReCAPTCHA
+  sitekey="6Lcqf44qAAAAAAh7u2ug5Cmc_jts-F1bA6CzkKO6"
+  onChange={(val) => setCapVal(val)}
+  className="recaptcha-container"  // Add class to apply CSS
+/>
+
+          <button type="submit" className="auth-btn" disabled={!capVal}>
+            Sign In
+          </button>
         </form>
         <div className="auth-footer">
           <p>
@@ -41,5 +63,4 @@ const SignIn = () => {
     </div>
   );
 };
-
 export default SignIn;
