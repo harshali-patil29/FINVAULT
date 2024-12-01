@@ -1,11 +1,11 @@
-/* Navbar container */
+/* Navbar CSS */
 .navbar {
   width: 100%;
-  height: 80px; /* Adjust the height to make enough space */
+  height: 80px;
   background: #fff;
   display: flex;
-  align-items: center; /* Vertically centers all items */
-  justify-content: space-between; /* Distributes space between title, search bar, and icons */
+  align-items: center;
+  justify-content: space-between;
   padding: 0 20px;
   position: fixed;
   top: 0;
@@ -13,7 +13,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar-left: Title or logo */
 .navbar h2 {
   font-size: 20px;
   font-weight: bold;
@@ -21,11 +20,10 @@
   margin-right: 20px;
 }
 
-/* Navbar-center: Search bar */
 .search-bar {
   display: flex;
   align-items: center;
-  width: 400px; /* Adjust width as needed */
+  width: 400px;
   background: #f4f4f4;
   border-radius: 20px;
   overflow: hidden;
@@ -48,12 +46,11 @@
   border-radius: 0 20px 20px 0;
 }
 
-/* Navbar-right: Icons and avatar */
 .navbar-icons {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-right: 50px; /* Add spacing to separate from search bar */
+  margin-right: 50px;
 }
 
 .navbar-icon {
@@ -67,31 +64,30 @@
 }
 
 .user-avatar {
-  width: 50px; /* Adjust size as needed */
+  width: 50px;
   height: 50px;
-  border-radius: 50%; /* Makes the image circular */
+  border-radius: 50%;
   cursor: pointer;
-  object-fit: cover; /* Ensures the image doesn't stretch */
+  object-fit: cover;
 }
-/* User icon container */
+
 .user-icon-container {
   position: relative;
   cursor: pointer;
 }
 
-/* Dropdown menu */
 .dropdown-menu {
   position: absolute;
-  top: 60px; /* Adjust based on the height of the navbar */
+  top: 60px;
   right: 0;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   z-index: 1000;
-  padding: 10px;
+  padding: 20px;
+
 }
 
-/* Logout button */
 .logout-button {
   width: 100%;
   padding: 10px 15px;
@@ -102,8 +98,11 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .logout-button:hover {
   background: #0056b3;
 }
+
+/* Services Page CSS */

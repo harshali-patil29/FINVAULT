@@ -11,6 +11,8 @@ import Services from "./components/Services";
 import Sidebar from "./components/Sidebar";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import UpdatePro from "./components/updatePro";
+
 
 const App = () => {
   return (
@@ -33,6 +35,7 @@ const App = () => {
           <Route path="/loans" element={<Loans />} />
           <Route path="/services" element={<Services />} />
           <Route path="/sidebar" element={<Sidebar />} />
+          <Route path="/updatePro" element={<UpdatePro />} />
         </Route>
       </Routes>
     </Router>
