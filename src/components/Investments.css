@@ -1,123 +1,159 @@
 .investments-container {
-    position: absolute; /* Allows precise positioning */
-    top: 80px; /* Leaves space for the navbar */
-    left: 290px; /* Sidebar width, adjust as per your sidebar width */
-    height: calc(100vh - 80px); /* Full height minus navbar height */
-    width: calc(100% - 250px); /* Full width minus sidebar width */
-    padding: 20px; /* Optional padding for content */
-    background: #f9f9f9; /* Background color */
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
-    box-sizing: border-box; /* Ensures padding doesn't affect width/height */
-  }
-  
+  position: relative;
+  top: 80px; /* Navbar height */
+  left: 20px;
+  width: calc(100% - 40px);
+  height: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Summary Section */
+.summary-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.summary-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.summary-card p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Charts Section */
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Investment and Stock Section */
+.investment-stock-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.my-investment,
+.trending-stock {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.investment-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.investment-item h4 {
+  font-size: 16px;
+  color: #333;
+}
+
+.investment-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.investment-item .positive {
+  color: #4caf50;
+}
+
+.investment-item .negative {
+  color: #ff5252;
+}
+
+.trending-stock table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trending-stock th,
+.trending-stock td {
+  padding: 10px;
+  text-align: left;
+}
+
+.trending-stock th {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+.trending-stock td.positive {
+  color: #4caf50;
+}
+
+.trending-stock td.negative {
+  color: #ff5252;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Summary Section */
-  .summary-section {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .summary-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .summary-card h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .summary-card p {
     font-size: 20px;
-    font-weight: bold;
-    color: #007bff;
   }
-  
-  /* Charts Section */
-  .charts-section {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .chart-card {
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Investment and Stock Section */
-  .investment-stock-section {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .my-investment,
-  .trending-stock {
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .investment-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-  }
-  
-  .investment-item h4 {
+
+  .summary-card p,
+  .summary-card h3 {
     font-size: 16px;
-    color: #333;
   }
-  
-  .investment-item p {
-    margin: 5px 0;
-    color: #666;
-  }
-  
-  .investment-item .positive {
-    color: #4caf50;
-  }
-  
-  .investment-item .negative {
-    color: #ff5252;
-  }
-  
-  .trending-stock table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .trending-stock th,
-  .trending-stock td {
+}
+
+@media screen and (max-width: 576px) {
+  .investments-container {
     padding: 10px;
-    text-align: left;
   }
-  
-  .trending-stock th {
-    background: #f4f4f4;
-    font-weight: bold;
+
+  h2 {
+    font-size: 18px;
   }
-  
-  .trending-stock td.positive {
-    color: #4caf50;
+
+  .summary-card p,
+  .summary-card h3 {
+    font-size: 14px;
   }
-  
-  .trending-stock td.negative {
-    color: #ff5252;
+
+  .chart-card {
+    padding: 10px;
   }
-  
+
+  .trending-stock table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
