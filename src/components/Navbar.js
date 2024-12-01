@@ -17,6 +17,12 @@ const Navbar = () => {
     navigate("/signin"); // Redirect to the Signin page
   };
 
+  const handleUpdate = () => {
+    // Navigate to the Update Profile page
+    console.log("Navigating to update profile");
+    navigate("/updatePro"); // Corrected path
+  };
+
   return (
     <div className="navbar">
       <h2>Finvault</h2>
@@ -40,10 +46,18 @@ const Navbar = () => {
           />
           {showDropdown && (
             <div className="dropdown-menu">
-              <button onClick={handleLogout} className="logout-button">
-                Logout
-              </button>
-            </div>
+            <div>
+             <button onClick={handleUpdate} className="logout-button">
+               Update Profile
+             </button>
+           </div>
+           <div>
+           <button onClick={handleLogout} className="logout-button">
+               Logout
+             </button>
+           </div>
+         </div>
+            
           )}
         </div>
       </div>
