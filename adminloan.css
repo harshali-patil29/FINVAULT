@@ -1,0 +1,97 @@
+.admin-loan-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .admin-loan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  
+  .admin-loan-table th,
+  .admin-loan-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .admin-loan-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .admin-loan-table tbody tr {
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .admin-loan-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  
+  .admin-loan-table td {
+    color: #555;
+  }
+  
+  .admin-loan-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .admin-loan-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .admin-loan-page {
+      padding: 10px;
+    }
+  
+    .admin-loan-table th,
+    .admin-loan-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .admin-loan-table th,
+    .admin-loan-table td {
+      font-size: 10px;
+      padding: 5px;
+    }
+  
+    h1 {
+      font-size: 18px;
+    }
+  
+    /* Scrollable Table for Small Screens */
+    .admin-loan-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    .admin-loan-table tbody tr:hover {
+      transform: none;
+    }
+  }
+  

@@ -1,0 +1,51 @@
+/* General layout container */
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling overflow */
+  }
+  
+  /* Full-width navbar */
+  .navbar {
+    width: 100%; /* Full page width */
+    height: 80px; /* Adjust height as needed */
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Main layout (below navbar) */
+  .main-layout {
+    display: flex;
+    margin-top: 80px; /* Leave space for the navbar */
+    height: calc(100vh - 80px); /* Fill the rest of the viewport */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    height: 100%;
+    background: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    top: 80px; /* Align below the navbar */
+    z-index: 999;
+  }
+  
+  /* Main content area */
+  .main-content {
+    flex: 1;
+    margin-left: 250px; /* Leave space for the sidebar */
+    padding: 20px;
+    background: #f9f9f9;
+    overflow-y: auto; /* Enable scrolling for content */
+  }
+  
